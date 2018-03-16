@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <h1>Lista de Clientes</h1>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="input-group mb-3">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Campo</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button class="dropdown-item">Action - 1</button>
+            <button class="dropdown-item">Another Action</button>
+            <button class="dropdown-item">Something else is here</button>
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <td scope="col">Codigo</td>
+          <td scope="col">RUC</td>
+          <td scope="col">Razón Social</td>
+          <td scope="col">Dirección</td>
+          <td scope="col">Teléfono</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of listaClientes">
+          <td>
+            {{cliente.codigoCliente}}
+          </td>
+          <td>
+            {{cliente.rucCliente}}
+          </td>
+          <td>
+            {{cliente.razonCliente}}
+          </td>
+          <td>
+            {{cliente.direccionCliente}}
+          </td>
+          <td>
+            {{cliente.telefonoCliente}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
